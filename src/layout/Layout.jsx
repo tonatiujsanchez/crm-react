@@ -24,7 +24,7 @@ const Layout = () => {
                     </NavLink>
             </nav>
         </div>
-        <div className="md:w-4/5 px-10 py-5">
+        <div className="md:w-4/5 px-3 sm:px-10 py-5">
             <Outlet />
         </div>
     </div>

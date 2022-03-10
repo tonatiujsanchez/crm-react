@@ -31,6 +31,30 @@
       "telefono": "12546",
       "notas": "El cliente requiere tóner cada fin de mes.",
       "id": 4
+    },
+    {
+      "nombre": "Brandon Santiago Sánchez",
+      "empresa": "Green Dev 7",
+      "email": "brandon@gmail.com",
+      "telefono": "8521254744",
+      "notas": "El cliente requiere tóner de calidad premium cada 15 días, con entrega a domicilio.",
+      "id": 5
+    },
+    {
+      "nombre": "Rodrigo Sánchez Hernández",
+      "empresa": "Hook Studio",
+      "email": "Rodrigo@gmail.com",
+      "telefono": "",
+      "notas": "El cliente requiere mantenimiento a sus copiadoras.",
+      "id": 6
+    },
+    {
+      "nombre": "Aaron Hernández",
+      "empresa": "Tlapalli Studio",
+      "email": "AaronHer@gmail.com",
+      "telefono": "999 888 7766",
+      "notas": "",
+      "id": 7
     }
   ]
 }

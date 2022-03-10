@@ -10,7 +10,7 @@ const Formulario = () => {
     const nuevoClienteSchema = Yup.object().shape({
         nombre: Yup.string()
                     .min(3, 'El nombre es muy corto')
-                    .max(18, 'El nombre es muy largo')
+                    .max(40, 'El nombre es muy largo')
                     .required('El nombre del cliente es obligatorio') ,
         empresa: Yup.string()
                         .required('El nombre de la empresa es obligatorio'),
