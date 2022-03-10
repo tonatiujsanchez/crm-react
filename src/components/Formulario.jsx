@@ -1,7 +1,11 @@
 import { Formik, Form, Field, ErrorMessage } from 'formik'
+import { useNavigate } from 'react-router-dom'
 import * as Yup from 'yup'
 
+
 const Formulario = () => {
+
+    const navigate = useNavigate()
 
     const nuevoClienteSchema = Yup.object().shape({
         nombre: Yup.string()
@@ -21,15 +25,33 @@ const Formulario = () => {
     })
 
 
-    const handleSubmit = (values)=>{
-        console.log(values);
+    const handleSubmit = async ( values, resetForm )=>{
+        try {
+            const url = 'http://localhost:4000/clientes';
+
+            const resp = await fetch(url, {
+                method: 'POST',
+                body: JSON.stringify( values ),
+                headers: { 
+                    'Content-Type': 'application/json'
+                 }
+            });
+
+            const result = await resp.json();
+            resetForm();
+            navigate('/clientes');
+            console.log( result );
+            
+        } catch (error) {
+            console.log('Hubo un error al intentar agregar un nuevo cliente.');
+        }
     }
 
 
 
 
   return (
-    <div className="mt-6 bg-white px-5 py-8 rounded-md shadow-md w-4/4 md:w-3/4 lg:w-3/6 mx-auto">
+    <div className="mt-6 bg-white px-5 py-8 rounded-md shadow-md w-4/4 md:w-3/4 lg:w-[600px] mx-auto">
         <h1 className="text-gray-600 font-bold text-center uppercase text-lg">
             Agregar Cliente
         </h1>
@@ -42,7 +64,9 @@ const Formulario = () => {
                 telefono: '',
                 notas: ''
             }} 
-            onSubmit={ handleSubmit } 
+            onSubmit={ ( values, { resetForm } )=> {
+                handleSubmit(values, resetForm);
+            }} 
             validationSchema = { nuevoClienteSchema } >
 
             {( { errors, isValid } ) => {

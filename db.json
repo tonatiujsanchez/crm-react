@@ -1,0 +1,36 @@
+{
+  "clientes": [
+    {
+      "nombre": "Bradon",
+      "empresa": "Hook Studio",
+      "email": "holamundo@gmail.com",
+      "telefono": "123456879",
+      "notas": "El cliente solicita un producto de calidad Premium.",
+      "id": 1
+    },
+    {
+      "nombre": "Bradon",
+      "empresa": "Hook Studio",
+      "email": "holamundo@gmail.com",
+      "telefono": "123456879",
+      "notas": "El cliente solicita un producto de calidad Premium.",
+      "id": 2
+    },
+    {
+      "nombre": "Santiago",
+      "empresa": "Dragon Game",
+      "email": "c.ilustraciones@gmail.com",
+      "telefono": "7571264112",
+      "notas": "Cliente frecuente que requiere post para días memorables.",
+      "id": 3
+    },
+    {
+      "nombre": "Rodrigo",
+      "empresa": "TSdev",
+      "email": "holamundo@gmail.com",
+      "telefono": "12546",
+      "notas": "El cliente requiere tóner cada fin de mes.",
+      "id": 4
+    }
+  ]
+}
