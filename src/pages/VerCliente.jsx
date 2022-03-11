@@ -14,7 +14,7 @@ const VerCliente = () => {
         setCargando(true)
         const getCliente = async() =>{
             try {
-                const url = `http://localhost:4000/clientes/${ id }`;
+                const url = `${ import.meta.env.VITE_API_URL }/${ id }`;
                 const resp = await fetch( url );
                 const result = await resp.json();
 
