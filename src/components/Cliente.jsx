@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 
 
-const Cliente = ({ cliente }) => {
+const Cliente = ({ cliente, handleEliminar }) => {
 
     const navigate = useNavigate();
 
@@ -24,9 +24,21 @@ const Cliente = ({ cliente }) => {
             <button
                 onClick={ ()=> navigate(`/clientes/${id}`) } 
                 type="button" 
-                className=" bg-green-600 hover:bg-green-700 text-white block w-full p-2 mb-2 uppercase font-bold text-xs rounded-sm">Ver</button>
-            <button type="button" className=" bg-blue-600 hover:bg-blue-700 text-white block w-full p-2 mb-2 uppercase font-bold text-xs rounded-sm">Editar</button>
-            <button type="button" className=" bg-red-600 hover:bg-red-700 text-white block w-full p-2 uppercase font-bold text-xs rounded-sm">Emilinar</button>
+                className=" bg-green-600 hover:bg-green-700 text-white block w-full p-2 mb-2 uppercase font-bold text-xs rounded-sm">
+                    Ver
+            </button>
+            <button
+                onClick={ ()=> navigate(`/clientes/editar/${ id }`) } 
+                type="button" 
+                className=" bg-blue-600 hover:bg-blue-700 text-white block w-full p-2 mb-2 uppercase font-bold text-xs rounded-sm">
+                    Editar
+            </button>
+            <button 
+                onClick={ ()=> handleEliminar( id, nombre ) }
+                type="button" 
+                className="bg-red-600 hover:bg-red-700 text-white block w-full p-2 uppercase font-bold text-xs rounded-sm">
+                    Emilinar
+            </button>
         </td>
 
     </tr>
