@@ -12,7 +12,7 @@ const Inicio = () => {
         const confirmar = confirm(`¿Deseas eliminar el cliente ${ nombre }?`)
         if( confirmar ){
             try {
-                const url = `${ import.meta.env.VITE_API_URL }/${ id }`;
+                const url = `https://my-json-server.typicode.com/tonatiujsanchez/crm-react/clientes/${ id }`;
                 const resp = await fetch(url,{
                     method: 'DELETE'
                 })
@@ -30,7 +30,7 @@ const Inicio = () => {
         setCargando(true);
         const getClientes = async () => {
             try {
-                const url = import.meta.env.VITE_API_URL;
+                const url = 'https://my-json-server.typicode.com/tonatiujsanchez/crm-react/clientes';
                 const resp = await fetch(url);
                 const result = await resp.json();
 

@@ -16,7 +16,7 @@ const EditarCliente = () => {
     setCargando(true)
     const getCliente = async() =>{
         try {
-            const url = `${import.meta.env.VITE_API_URL}/${ id }`;
+            const url = `https://my-json-server.typicode.com/tonatiujsanchez/crm-react/clientes/${ id }`;
             const resp = await fetch( url );
             const result = await resp.json();
 

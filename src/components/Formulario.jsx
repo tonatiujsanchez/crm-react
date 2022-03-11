@@ -29,7 +29,7 @@ const Formulario = ({ cliente, cargando }) => {
         try {
             let resp;
             if( cliente.id ){
-                const url = `${ import.meta.env.VITE_API_URL }/${ cliente.id }`;
+                const url = `https://my-json-server.typicode.com/tonatiujsanchez/crm-react/clientes/${ cliente.id }`;
                 resp = await fetch(url, {
                     method: 'PUT',
                     body: JSON.stringify( values ),
@@ -38,7 +38,7 @@ const Formulario = ({ cliente, cargando }) => {
                      }
                 });
             }else{
-                const url = import.meta.env.VITE_API_URL;
+                const url = 'https://my-json-server.typicode.com/tonatiujsanchez/crm-react/clientes';
                 resp = await fetch(url, {
                     method: 'POST',
                     body: JSON.stringify( values ),
