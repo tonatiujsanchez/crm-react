@@ -13,8 +13,8 @@ const Layout = () => {
             </div>
             <nav className="px-10 py-10 md:sticky top-20">
                     <NavLink 
-                        to="/clientes" 
-                        className={`${ urlActual == '/clientes' ? 'text-white' : 'text-indigo-300' } block text-2xl my-4 hover:text-white font-bold`}>
+                        to="/" 
+                        className={`${ urlActual == '/' ? 'text-white' : 'text-indigo-300' } block text-2xl my-4 hover:text-white font-bold`}>
                             Clientes
                     </NavLink>
                     <NavLink 

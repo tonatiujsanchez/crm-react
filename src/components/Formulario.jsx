@@ -49,7 +49,7 @@ const Formulario = ({ cliente, cargando }) => {
             }
             await resp.json();
             resetForm();
-            navigate('/clientes');
+            navigate('/');
             
         } catch (error) {
             console.log('Hubo un error al intentar agregar un nuevo cliente.');
